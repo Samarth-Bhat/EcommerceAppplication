@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DBConnect {
 
     private static Connection conn = null;
-    private static DBConnect instance = null;
+    private static volatile DBConnect instance = null;
 
     private DBConnect() {
         try {
